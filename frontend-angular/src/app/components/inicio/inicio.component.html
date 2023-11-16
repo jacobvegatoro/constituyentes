@@ -1,0 +1,40 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Integrantes de la convención</h1>
+        <p class="lead text-muted">A continuación se indican los integrantes de la convención 
+            constitucional, junto con un enlace a su perfil en Wkidata. Además encontrarás
+            un enlace que te permitirá agregar nuevos datos.
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Buscar integrante</a>&nbsp;
+          <a href="#" class="btn btn-secondary my-2">Envíanos tus comentarios</a>
+        </p>
+      </div>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div *ngFor="let integrante of integrantesList" class="col">
+          <div class="card shadow-sm">
+            <img src="{{ integrante.content.image }}" class="card-img-top" alt="Elisa Loncón">
+            <div class="card-body">
+              <h5>{{ integrante.content.name }}</h5>
+              <p class="card-text">{{ integrante.entity }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="https://www.wikidata.org/wiki/{{ integrante.entity }}" target="_blank" class="btn btn-sm btn-outline-secondary">Ver</a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary">Editar</a>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
